@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form name="form1" method="post" th:action="@{/login}">
+  
+    <p>
+      <label for="textfield">学号</label>
+      <input type="text" name="account" id="account">
+      
+      <label for="textfield2"><br>
+        密码</label>
+      <input type="text" name="passwd" id="passwd">
+    </p>
+    <p>
+      
+      
+      <input type="submit" name="button" id="button" data-btn value="登陆">
+    </p>
+  
+</form>
+</body>
+<script src="../static/js/jquery-3.2.0.min.js" th:src="@{/js/jquery-3.2.0.min.js}"></script>
+</html>

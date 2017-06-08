@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form name="form1" method="post" enctype="multipart/form-data" th:action="@{/attendance}">
+	用户：
+  <div th:text="${loginuserhtml?.name}"></div>
+
+  <p>当前状态：  </p>
+  <p>
+    <input type="file" name="file" id="fileField">    
+    </p>
+    <p>
+      <input type="submit" name="button" id="button" value="拍照考勤">
+    </p>
+</form>
+<p>=========================================</p>
+<form name="form2" method="post" th:action="@{/attendance}">
+  <p>
+    <textarea name="leave_data" id="leave_data"></textarea>
+    <input type="submit" name="button2" id="button2" value="请假">
+  </p>
+</form>
+
+
+</body>
+<script src="../static/js/jquery-3.2.0.min.js" th:src="@{/js/jquery-3.2.0.min.js}"></script>
+
+<script>
+
+
+</script>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset='utf-8'>
+    <title>Datepair for jQuery &ndash; Demos and Documentation</title>
+    <meta name="description" content="A jQuery plugin for intelligently selecting date and time ranges inspired by Google Calendar." />
+	<script src="../static/js/jquery-1.9.1.js" th:src="@{/js/jquery-1.9.1.js}"></script>
+	<script src="../static/js/bootstrap-datepicker.js" th:src="@{/js/bootstrap-datepicker.js}"></script>
+	<script src="../static/js/jquery.datepair.js" th:src="@{/js/jquery.datepair.js}"></script>
+	<script src="../static/js/jquery.datepair.min.js" th:src="@{/js/jquery.datepair.min.js}"></script>
+	<script src="../static/js/jquery.ptTimeSelect.js" th:src="@{/js/jquery.ptTimeSelect.js}"></script>
+	<script src="../static/js/moment.min.js" th:src="@{/js/moment.min.js}"></script>
+	<script src="../static/js/pikaday.js" th:src="@{/js/pikaday.js}"></script>
+	<script src="../static/js/site.js" th:src="@{/js/site.js}"></script>
+	<script src="../static/js/jquery.timepicker.js" th:src="@{/js/jquery.timepicker.js}"></script>
+	<link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap-datepicker.css}" href="../static/css/bootstrap-datepicker.css" />	
+	<link rel="stylesheet" type="text/css" th:href="@{/css/jquery.ptTimeSelect.css}" href="../static/css/jquery.ptTimeSelect.css" />
+	<link rel="stylesheet" type="text/css" th:href="@{/css/pikaday.css}" href="../static/css/pikaday.css" />
+	<link rel="stylesheet" type="text/css" th:href="@{/css/site.css}" href="../static/css/site.css" />
+	<link rel="stylesheet"  th:href="@{/css/jquery-ui.css}" media="all" href="../static/css/jquery-ui.css" />
+	<link rel="stylesheet" type="text/css" href="../static/css/jquery.timepicker.css" th:href="@{/css/jquery.timepicker.css}" />
+</head>
+<body> 
+<form name="form1" method="post" action="">
+    <p>
+      <label for="textfield">活动名称</label>
+      <input type="text" name="textfield" id="textfield">
+    </p>
+    <section id="examples">
+        <article>
+            <div class="demo">
+                <div id="basicExample">
+                  <input type="text" class="date start" />
+
+                    <input type="text" class="time start" /> to
+				
+                    <input type="text" class="time end" />
+
+                    <input type="text" class="date end" />
+
+              </div>
+            </div>            
+            <script>
+                $('#basicExample .time').timepicker({
+                    'showDuration': false,
+                    'timeFormat': 'g:ia'
+                });
+                $('#basicExample .date').datepicker({
+                    'format': 'yyyy/m/d',
+                    'autoclose': true
+                });
+                $('#basicExample').datepair();
+            </script>
+        </article>
+   </section>
+</form>  
+</body>
+</html>

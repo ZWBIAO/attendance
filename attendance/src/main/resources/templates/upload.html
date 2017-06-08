@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="/upload" method="post" enctype="multipart/form-data" name="form1" ><!--提交地址-->
+<!-- 表单需要enctype="multipart/form-data" 才能上传-->
+  <label for="fileField">File:</label>
+  <input type="file" name="file" id="fileField">
+
+  <input type="submit" name="submit" id="button" value="提交">
+</form>
+</body>
+</html>
